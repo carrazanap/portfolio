@@ -45,6 +45,23 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "gunicorn"
+version = "21.2.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+packaging = "*"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "itsdangerous"
 version = "2.1.2"
 description = "Safely pass data to untrusted environments and back."
@@ -70,6 +87,14 @@ i18n = ["Babel (>=2.7)"]
 name = "markupsafe"
 version = "2.1.3"
 description = "Safely add untrusted strings to HTML/XML markup."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "packaging"
+version = "23.2"
+description = "Core utilities for Python packages"
 category = "main"
 optional = false
 python-versions = ">=3.7"
@@ -142,19 +167,21 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "a7cbd513aefba77a30b5c382daab70caba3a2aee78a4ebfcc6f99fb86e96a893"
+content-hash = "325ab6ead259f6673248606c0b61e89de66d01702db1f7efc47b0e016baf330f"
 
 [metadata.files]
 blinker = []
 click = []
 colorama = []
 flask = []
+gunicorn = []
 itsdangerous = []
 jinja2 = [
     {file = "Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61"},
     {file = "Jinja2-3.1.2.tar.gz", hash = "sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852"},
 ]
 markupsafe = []
+packaging = []
 python-dotenv = []
 python-http-client = []
 sendgrid = []
